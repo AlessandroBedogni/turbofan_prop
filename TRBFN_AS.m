@@ -43,6 +43,8 @@ else             %se volo supersonico (onda normale)
 
     %M_PD=...
 
+    error('la function tratta solo il volo subsonico!');
+
 end
 
 %PRESA DINAMICA
@@ -209,9 +211,9 @@ if nargin > 14  %c'è il postbruciatore
 
     p09=eps_AB*p03; %p08=p03=p07
 
-    t=[Ta, T02, T03, T04, T05, T06, T07, T08, T09, T09*(pa/p09)^g];
+    t=[Ta, T02, T03, T04, T05, T06, T07, T08, T09, T09*(pa/p09)^g]; %vettore temperature per avviare la funzione Piano_Ts
 
-    p=[pa, p02, p03, p04, p05, p06, p07, p08, p09, pa];
+    p=[pa, p02, p03, p04, p05, p06, p07, p08, p09, pa]; %vettore pressioni per avviare la funzione Piano_Ts
 
 else   %no postbruciatore
     
@@ -221,9 +223,9 @@ else   %no postbruciatore
 
     p09=p03;
 
-    t=[Ta, T02, T03, T04, T05, T06, T07, T08, T09*(pa/p09)^g];
+    t=[Ta, T02, T03, T04, T05, T06, T07, T08, T09*(pa/p09)^g]; %vettore temperature per avviare la funzione Piano_Ts
 
-    p=[pa, p02, p03, p04, p05, p06, p07, p08, pa];
+    p=[pa, p02, p03, p04, p05, p06, p07, p08, pa]; %vettore pressioni per avviare la funzione Piano_Ts
 
 end
 

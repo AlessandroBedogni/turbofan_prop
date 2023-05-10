@@ -40,6 +40,8 @@ else             %se volo supersonico (onda normale)
 
     %M_PD=...
 
+    error('la function tratta solo il caso subsonico!');
+
 end
 
 %PRESA DINAMICA
@@ -135,9 +137,9 @@ ETA_th=( (1+f)*ve1^2-v0^2 + BPR*(ve2^2-v0^2) ) / (2*f*Hi); %rendimento termodina
 
 ETA_o=ETA_th*ETA_p;   %rendimento globale
 
-t=[Ta, T02, T03, T04, T05, T06, T07, T8id];
+t=[Ta, T02, T03, T04, T05, T06, T07, T8id]; %vettore temperature per avviare la funzione Piano_Ts
 
-p=[pa, p02, p03, p04, p05, p06, p07, pa];
+p=[pa, p02, p03, p04, p05, p06, p07, pa]; %vettore pressioni per avviare la funzione Piano_Ts
 
 %Piano_Ts(t, p);
 

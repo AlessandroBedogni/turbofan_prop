@@ -2,7 +2,8 @@ function [outputArg1,outputArg2] = Piano_Ts(T, p)
 %tutte le unità di misura sono espresse secondo SI
 
 %T, p vettori di temperature e pressioni
-%N è la risoluzione
+%N è la risoluzione desiderata (intesa come densità di puntini uniti nel
+%grafico)
 
 
 

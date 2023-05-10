@@ -138,3 +138,45 @@ plot(S, t)
 %    hold on
 
 %end
+
+%% influenza temperature su prestazioni
+clc;
+clear;
+MA=0.4;
+Tes=293;
+pa=1e5;
+m=42;
+BPR=0.3;
+eps_PD=0.99;
+beta_F=3;
+eta_F=0.93;
+beta_C=27;
+eta_C=0.9;
+eps_CB=0.95;
+eta_HPT=0.95;
+eta_LPT=0.95;
+eta_N1=0.99;
+eta_N2=0.99;
+Temp=linspace(1300, 2000, 100);
+for k=1:100
+
+    [f(k), BPRmax, T, I(k), TSFC(k), ETA_p(k), ETA_th(k), ETA_o(k)]=TRBFN_SEP(MA, Tes, pa, m, BPR, eps_PD, beta_F, eta_F, beta_C, eta_C, Temp(k), eps_CB, eta_HPT, eta_LPT, eta_N1, eta_N2);
+
+end
+
+plot(Temp, I);
+grid on 
+
+xlabel('Temperatura massima del ciclo [K]');
+ylabel('Spinta specifica ')
+
+figure 
+
+plot(Temp, TSFC);
+grid on
+
+figure 
+
+plot(Temp, ETA_o);
+grid on
+

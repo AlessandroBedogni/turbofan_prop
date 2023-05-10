@@ -139,7 +139,7 @@ t=[Ta, T02, T03, T04, T05, T06, T07, T8id];
 
 p=[pa, p02, p03, p04, p05, p06, p07, pa];
 
-Piano_Ts(t, p);
+%Piano_Ts(t, p);
 
 %T01
 

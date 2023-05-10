@@ -64,8 +64,9 @@ for k=1:M-1
 
 end
 
-xlabel('S [J/Kg*K]');
+xlabel('s [J/Kg*K]');
 ylabel('T [K]');
+axis equal;
 
 for n=1:M   %disegno delle isobare
 
